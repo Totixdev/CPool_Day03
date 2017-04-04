@@ -1,27 +1,34 @@
 #include<unistd.h>
 
-int	my_putchar()
+int main(void)
+
 {
-  
-  int totix;
-  totix = 48;
- 
-  
-    {
-      
-    while(totix <=57 )
-	
-	totix = totix + 1; 
-      
-      
-    }
-  
+  char n1, n2, n3;
+  n1 = '0';
+  n2 = '0';
+  n3 = '0';
+
+  while(n1 <= '9')
+    { 
+    while(n2 <= '9')
+      {
+      while(n3 <= '9')
+	{
+	if(n1 < n2 && n2 < n3)
+	  {
+	  write(1, &n1, 1);
+	  write(1, &n2, 1);
+	  write(1, &n3, 1);
+	  write(1, "\n", 1);
+	}
+	n3 = n3 + 1;
+      }
+
+      n3 = '0';
+      n2 = n2 + 1;
+      }
+
+    n2 ='0';
+    n1 = n1 + 1;
+  }
 }
-int    main(void)
-   
- {
-   my_putchar();
-   
-    return 0;
- }
- 
