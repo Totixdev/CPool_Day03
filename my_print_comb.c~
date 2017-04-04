@@ -1,0 +1,27 @@
+#include<unistd.h>
+
+int	my_putchar()
+{
+  
+  int totix;
+  totix = 48;
+  write(1, &totix ,1);
+  
+    {
+      
+    while(totix <= 57)
+	
+	totix = totix + 1; 
+      write (1, &totix ,1);
+      
+    }
+  
+}
+int    main(void)
+   
+ {
+   my_putchar();
+   
+    return 0;
+ }
+ 
